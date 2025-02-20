@@ -12,6 +12,13 @@ print(scores)
 
 for round_number in range(1, rounds + 1):
     print(f"\nRound {round_number}")
-    
+    for player in range(num_players):
+        input(f"Player {player + 1}, press Enter to roll the dice...")
+        number = random.randint(1, 6)
+        print(f"You rolled a {number}\n")
+        scores[player] += number
+        print(scores)
+
+print(scores)
 
 
