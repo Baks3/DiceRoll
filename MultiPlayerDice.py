@@ -19,6 +19,12 @@ for round_number in range(1, rounds + 1):
         scores[player] += number
         print(scores)
 
-print(scores)
+print("\nFinal Scores:")
+for player in range(num_players):
+    print(f"Player {player + 1}: {scores[player]}")
+
+high_score = max(scores)
+winner = scores.index(high_score) + 1
+print(f"\nCongratulations, Player {winner} wins! With a score of {high_score}")
 
 
