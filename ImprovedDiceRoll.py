@@ -8,6 +8,8 @@ scores = []
 for _ in range(num_players):
     scores.append(0)
 
+print(scores)
+
 for round_number in range(1, rounds + 1):
     print(f"\nRound {round_number}")
     
