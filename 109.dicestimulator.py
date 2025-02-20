@@ -41,5 +41,7 @@ while x == "y":
         print("| O    O |")
         print("| O    O |")
         print("----------")
-    x = input("Press y to roll again")
+    x = input("Press 'y' to roll again or any other key to exit: ")
+
+print("Thank you for using the dice simulator!")
     
