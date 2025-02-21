@@ -10,14 +10,14 @@ player_names = []
 for num in range(num_players):
     scores.append(0)
     player = input(f"Player {num + 1} enter your name: ")
-    player_names.append(player)
+    player_names.append(player.title())
 
 for round_number in range(1, rounds + 1):
     print(f"\nRound {round_number}")
     for player in range(num_players):
         input(f"{player_names[player]}, press Enter to roll the dice...")
         number = random.randint(1, 6)
-        print(f"You rolled a {number}\n")
+        print(f"You rolled a {number}")
         DiceRoll.show_dice(number)
 
         if number == 6:
@@ -25,7 +25,7 @@ for round_number in range(1, rounds + 1):
             extra_roll = random.randint(1, 6)
             print(f"Extra roll: You rolled a {extra_roll}\n")
             DiceRoll.show_dice(extra_roll)
-            scores[player] += extra_roll
+            scores[player] += extra_roll + 6
 
         elif number == 1:
             print("Unlucky roll! You lose a point!")
@@ -34,7 +34,7 @@ for round_number in range(1, rounds + 1):
             scores[player] += number
 
         
-        print(f"{player_names[player]}'s score: {scores[player]}")
+        print(f"\n{player_names[player]}'s score: {scores[player]}\n")
 
     if random.choice([True, False]):
         print("Double points round! All points this round are doubled.")
