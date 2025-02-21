@@ -1,4 +1,5 @@
 import random
+import DiceRoll
 
 print("Welcome to the Dice Simulator!")
 num_players = int(input("Enter the number of players: "))
@@ -19,6 +20,7 @@ for round_number in range(1, rounds + 1):
         input(f"{player_names[player]}, press Enter to roll the dice...")
         number = random.randint(1, 6)
         print(f"You rolled a {number}\n")
+        DiceRoll.show_dice(number)
         scores[player] += number
         print(scores)
 
