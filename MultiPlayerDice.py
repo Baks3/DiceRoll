@@ -34,7 +34,7 @@ def get_rounds():
 
 
 def roll_dice(rounds, player_names):
-    scores = {player: 0 for player in player_names}  # Dictionary to track scores
+    scores = {player: 0 for player in player_names}
 
     for round_number in range(1, rounds + 1):
         print("\nFinal Round" if round_number == rounds else f"\nRound {round_number}")
