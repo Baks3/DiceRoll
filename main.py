@@ -16,6 +16,12 @@ def roll_dice(rounds, player_names):
         for player in player_names:
             input(f"{player}, press Enter to roll the dice...\n")
 
+            print("Rolling", end="", flush=True)
+            for _ in range(3):  
+                time.sleep(0.5)
+                print(".", end="", flush=True)
+            print()
+
             roll = random.randint(1, 6)
             print(f"You rolled a {roll}")
             DiceRoll.show_dice(roll)
