@@ -1,4 +1,8 @@
 import MultiPlayerDice as MPD
+import time
+
+today = time.strftime("%b %d, %Y %H:%M:%S")
+print("It is now: ", today)
 
 def main():
     player_names = MPD.get_names()
