@@ -24,7 +24,8 @@ def roll_dice(rounds, player_names):
                 scores[player] += handle_extra_roll()
             elif roll == 1:
                 print("Unlucky roll! You lose a point!")
-                scores[player] -= 1
+                if scores[player] > 0:
+                    scores[player] -= 1
             else:
                 roll = MPD.double_points(roll, player)
                 scores[player] += roll
@@ -42,11 +43,25 @@ def handle_extra_roll():
     return extra_roll + 6  
 
 
+def final_scores(scores):
+    print("\nFinal Scores:")
+    for player, score in scores.items():
+        print(f"{player}: {score}")
+
+    high_score = max(scores.values())
+    winners = [player for player, score in scores.items() if score == high_score]
+
+    if len(winners) == 1:
+        print(f"\nCongratulations, {winners[0]} wins with a score of {high_score}!\n")
+    else:
+        print(f"\nIt's a tie! The winners are {', '.join(winners)} with a score of {high_score}!\n")
+
+
 def main():
     player_names = MPD.get_names()
     rounds = MPD.get_rounds()
     scores = roll_dice(rounds, player_names)
-    MPD.final_scores(scores)
+    final_scores(scores)
 
 
 if __name__ == "__main__":

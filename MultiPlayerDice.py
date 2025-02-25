@@ -34,21 +34,6 @@ def get_rounds():
 
 
 
-
-def final_scores(scores):
-    print("\nFinal Scores:")
-    for player, score in scores.items():
-        print(f"{player}: {score}")
-
-    high_score = max(scores.values())
-    winners = [player for player, score in scores.items() if score == high_score]
-
-    if len(winners) == 1:
-        print(f"\nCongratulations, {winners[0]} wins with a score of {high_score}!\n")
-    else:
-        print(f"\nIt's a tie! The winners are {', '.join(winners)} with a score of {high_score}!\n")
-
-
 def double_points(number, player):
     if random.choice([True, False]):
         print(f"Double points round! {player} gets their number doubled.")
