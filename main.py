@@ -21,12 +21,7 @@ def roll_dice(rounds, player_names):
             DiceRoll.show_dice(roll)
 
             if roll == 6:
-                print("Lucky roll! You get an extra roll!")
-                extra_roll = random.randint(1, 6)
-                print(f"Extra roll: You rolled a {extra_roll}\n")
-                DiceRoll.show_dice(extra_roll)
-                scores[player] += extra_roll + 6
-
+                scores[player] += handle_extra_roll()
             elif roll == 1:
                 print("Unlucky roll! You lose a point!")
                 scores[player] -= 1
@@ -37,6 +32,14 @@ def roll_dice(rounds, player_names):
             print(f"\n{player}'s score: {scores[player]}\n")
 
     return scores
+
+
+def handle_extra_roll():
+    print("Lucky roll! You get an extra roll!")
+    extra_roll = random.randint(1, 6)
+    print(f"Extra roll: You rolled a {extra_roll}")
+    DiceRoll.show_dice(extra_roll)
+    return extra_roll + 6  
 
 
 def main():
