@@ -16,7 +16,7 @@ Each player takes turns to roll the dice by pressing Enter.
 
 3. Unlucky Roll: If a player rolls a 1, they lose a point.
 
-4. Double Points Round: Random rounds where all points are doubled.
+4. Double Points Round: Random rounds where points are doubled for the player.
 
 ## Scoring
 
@@ -24,7 +24,7 @@ Each player takes turns to roll the dice by pressing Enter.
 
 2. In case of a lucky roll, the extra roll points are also added.
 
-3. In case of an unlucky roll, 1 point is deducted from the player's score.
+3. In case of an unlucky roll, 1 point is deducted from the player's score if it above 0.
 
 ## Installation
 

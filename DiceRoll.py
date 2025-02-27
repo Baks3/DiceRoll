@@ -1,5 +1,3 @@
-import random
-
 
 DICE_ART = {
     1: (
@@ -48,5 +46,5 @@ DICE_ART = {
 
 def show_dice(roll: int):
     """Prints the ASCII art representation of a dice roll."""
-    for line in DICE_ART[roll]:
-        print(line)
+    for dice in DICE_ART[roll]:
+        print(dice)

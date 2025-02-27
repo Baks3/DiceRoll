@@ -1,6 +1,4 @@
 import random
-import DiceRoll
-
 
 def get_names():
     while True:
